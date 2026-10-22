@@ -12,5 +12,4 @@ class DwarfBlacksmith(Dwarf):
                 f"with skill of the {self._skill_level} level")
 
     def get_rating(self) -> int:
-        rating = int(self._skill_level)
-        return rating
+        return self._skill_level
