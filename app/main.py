@@ -3,13 +3,11 @@ from app.players.dwarves.dwarf_warrior import DwarfWarrior, Dwarf
 from app.players.dwarves.dwarf_blacksmith import DwarfBlacksmith
 from app.players.elves.elf_ranger import ElfRanger, Elf
 from app.players.elves.druid import Druid
+from players.player import Player
 
 
 def calculate_team_total_rating(players: list[Player]) -> int:
-    rating_count = 0
-    for player in players:
-        rating_count += player.get_rating()
-    return rating_count
+    return sum(player.get_rating() for player in players)
 
 
 def elves_concert(players: list[Elf]) -> None:
